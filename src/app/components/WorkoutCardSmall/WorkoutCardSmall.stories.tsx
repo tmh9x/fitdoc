@@ -8,12 +8,12 @@ export default {
 
 export const Card = (): JSX.Element => (
   <WorkoutCardSmall
-    thumbnail="/pushups.jpeg"
+    thumbnail="pushups.jpeg"
     name="Chest Workout"
     category="Muscle"
-    iconTimer="/timer.png"
+    iconTimer="timer.png"
     duration="15 min."
-    iconLevel="/level.png"
+    iconLevel="level.png"
     level="level"
   />
 );
