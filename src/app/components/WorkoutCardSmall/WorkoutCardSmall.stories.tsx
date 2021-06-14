@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkoutCardSmall from './workoutCardSmall';
+import WorkoutCardSmall from './WorkoutCardSmall';
 
 export default {
   title: 'Components/WorkoutCardSmall',

@@ -11,7 +11,7 @@ type WorkoutCardSmallProps = {
   level: string;
 };
 
-function workoutCardSmall({
+function WorkoutCardSmall({
   thumbnail,
   name,
   category,
@@ -42,4 +42,4 @@ function workoutCardSmall({
     </article>
   );
 }
-export default workoutCardSmall;
+export default WorkoutCardSmall;
