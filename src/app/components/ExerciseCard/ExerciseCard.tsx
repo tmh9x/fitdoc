@@ -13,16 +13,14 @@ function ExerciseCard({
   category,
 }: ExerciseCardProps): JSX.Element {
   return (
-    <article className="w-32 h-44 rounded-xl grid">
-      <div className="">
-        <img
-          className="w-44 h-24 rounded-t-xl object-cover"
-          src={thumbnail}
-          alt=""
-        />
-      </div>
-      <div className="pl-1 text-sm font-bold">{name}</div>
-      <div className="pl-1 text-sm">{category}</div>
+    <article className="w-32 h-44 rounded-xl grid text-sm">
+      <img
+        className="w-44 h-24 rounded-t-xl object-cover"
+        src={thumbnail}
+        alt=""
+      />
+      <h3 className="pl-1 font-bold">{name}</h3>
+      <div className="pl-1">{category}</div>
     </article>
   );
 }
