@@ -21,7 +21,7 @@ function WorkoutCardSmall({
   level,
 }: WorkoutCardSmallProps): JSX.Element {
   return (
-    <article className="bg-white w-72 rounded-xl grid">
+    <article className="bg-secondary w-72 rounded-xl grid">
       <div className="">
         <img
           className="w-72 h-24 object-cover rounded-t-xl"

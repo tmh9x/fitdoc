@@ -13,7 +13,7 @@ function ExerciseCard({
   category,
 }: ExerciseCardProps): JSX.Element {
   return (
-    <article className="w-32 h-44 rounded-xl grid text-sm">
+    <article className="bg-secondary w-32 h-44 rounded-xl grid text-sm">
       <img
         className="w-44 h-24 rounded-t-xl object-cover"
         src={thumbnail}
