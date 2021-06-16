@@ -16,7 +16,7 @@ function WorkoutCardLarge({
         <img className="rounded-3xl" src={thumbnail} alt="" />
       </div>
       <div className="w-48 bg-transparent row-start-2 row-end-3 col-start-2 col-end-3 place-self-end justify-self-end">
-        <p className="font-sans bg-white text-center rounded-tl-xl rounded-br-xl pt-1 pl-3 pb-1 pr-3">
+        <p className="bg-secondary font-sans text-center rounded-tl-xl rounded-br-xl pt-1 pl-3 pb-1 pr-3">
           {name}
         </p>
       </div>
