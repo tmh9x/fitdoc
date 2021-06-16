@@ -10,7 +10,8 @@ module.exports = {
       primary: '#24272f;',
       secondary: '#fff',
       tertiary: '#707070',
-      buttonVar1: '#ff2e55',
+      primaryButton: '#ff2e55',
+      secondaryButton: '#43BA7C',
     },
     borderColor: {
       primary: '#707070',
