@@ -5,14 +5,14 @@ import 'tailwindcss/tailwind.css';
 
 function WorkoutOverview(): JSX.Element {
   return (
-    <div className="m-6 pt-2">
+    <div className="pt-2 m-6">
       <Header
         thumbnail="logo.png"
         name="fitdoc"
         isProfileButtonVisible={false}
       />
 
-      <main className="mt-6 flex flex-col place-items-center">
+      <main className="flex flex-col mt-6 place-items-center">
         <WorkoutCardOverview
           thumbnail="pushups.jpeg"
           name="Push Ups"

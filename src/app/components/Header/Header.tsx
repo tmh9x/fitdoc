@@ -17,15 +17,15 @@ function Header({
   isProfileButtonVisible,
 }: HeaderProps): JSX.Element {
   return (
-    <header className="text-secondary grid grid-cols-3 text-3xl border-b-2 border-primary pb-2">
+    <header className="grid grid-cols-3 pb-2 text-3xl border-b-2 text-secondary border-primary">
       <div className="self-center">
         {isBackButtonVisible && <BackButton thumbnail="back.png" />}
       </div>
-      <div className="flex place-items-center justify-center">
+      <div className="flex justify-center place-items-center">
         <img className="w-7 h-7" src={thumbnail} />
         {name}
       </div>
-      <div className="justify-self-end self-center">
+      <div className="self-center justify-self-end">
         {isProfileButtonVisible && <ProfileButton thumbnail="profile.png" />}
       </div>
     </header>
