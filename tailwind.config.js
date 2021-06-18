@@ -22,7 +22,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: { borderStyle: ['last'] },
   },
   plugins: [],
 };
