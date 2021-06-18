@@ -5,11 +5,15 @@ import WorkoutCardSmall from '../../components/WorkoutCardSmall/WorkoutCardSmall
 import ExerciseCard from '../../components/ExerciseCard/ExerciseCard';
 import 'tailwindcss/tailwind.css';
 
-function Login(): JSX.Element {
+function Home(): JSX.Element {
   return (
     <div className="m-6">
       <header className="pt-2">
-        <Header thumbnail="logo.png" name="fitdoc" />
+        <Header
+          thumbnail="logo.png"
+          name="fitdoc"
+          isProfileButtonVisible={true}
+        />
       </header>
 
       <main className="text-secondary">
@@ -80,4 +84,4 @@ function Login(): JSX.Element {
   );
 }
 
-export default Login;
+export default Home;
