@@ -9,7 +9,7 @@ type MessageCardProps = {
 
 function MessageCard({ thumbnail, message }: MessageCardProps): JSX.Element {
   return (
-    <div className="p-6 mx-auto text-center w-80 text-secondary rounded-xl bg-primary">
+    <div className="p-6 text-center w-80 text-secondary rounded-xl bg-primary">
       <img className="w-40 mx-auto" src={thumbnail} alt="" />
       <div className="p-6 text-xl">{message}</div>
       <div>
