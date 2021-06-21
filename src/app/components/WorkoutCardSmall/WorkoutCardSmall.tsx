@@ -21,19 +21,19 @@ function WorkoutCardSmall({
   level,
 }: WorkoutCardSmallProps): JSX.Element {
   return (
-    <article className="bg-secondary w-72 rounded-xl grid">
+    <article className="grid bg-secondary w-72 rounded-xl">
       <div className="">
         <img
-          className="w-72 h-24 object-cover rounded-t-xl"
+          className="object-cover h-24 w-72 rounded-t-xl"
           src={thumbnail}
           alt=""
         />
       </div>
-      <div className="font-sans text-sm pl-3 pt-1 pr-3">{name}</div>
-      <div className="font-sans text-xs pl-3 pb-1 border-b border-dashed">
+      <div className="pt-1 pl-3 pr-3 font-sans text-sm">{name}</div>
+      <div className="pb-1 pl-3 font-sans text-xs border-b border-dashed">
         {category}
       </div>
-      <div className="flex font-sans text-xs text-gray-400 pl-3 pt-1 pr-3 pb-1">
+      <div className="flex pt-1 pb-1 pl-3 pr-3 font-sans text-xs text-gray-400">
         <img className="w-4 h-4 mr-1" src={iconTimer} alt="" />
         {duration}
         <img className="w-3.5 h-3.5 mr-1 ml-5" src={iconLevel} alt="" />

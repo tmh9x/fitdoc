@@ -19,7 +19,7 @@ function SetCard({ name, sets }: SetCardProps): JSX.Element {
     </div>
   ));
   return (
-    <div className="w-80 pt-2 rounded-xl bg-secondary">
+    <div className="pt-2 w-80 rounded-xl bg-secondary">
       <h2 className="pl-4 font-bold">{name}</h2>
       <div>{setList}</div>
     </div>

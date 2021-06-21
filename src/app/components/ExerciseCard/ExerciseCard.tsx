@@ -13,9 +13,9 @@ function ExerciseCard({
   category,
 }: ExerciseCardProps): JSX.Element {
   return (
-    <article className="bg-secondary w-32 h-44 rounded-xl grid text-sm">
+    <article className="grid w-32 text-sm bg-secondary h-44 rounded-xl">
       <img
-        className="w-44 h-24 rounded-t-xl object-cover"
+        className="object-cover h-24 w-44 rounded-t-xl"
         src={thumbnail}
         alt=""
       />
