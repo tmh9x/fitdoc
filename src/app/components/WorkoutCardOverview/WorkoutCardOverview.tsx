@@ -1,5 +1,6 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
+import Button from '../Button/Button';
 
 type WorkoutCardOverviewProps = {
   thumbnail: string;
@@ -13,13 +14,13 @@ function WorkoutCardOverview({
   description,
 }: WorkoutCardOverviewProps): JSX.Element {
   return (
-    <article className="bg-secondary w-80 rounded-xl grid auto-rows-min">
+    <article className="grid bg-secondary w-80 rounded-xl auto-rows-min">
       <img className="rounded-t-xl" src={thumbnail} alt="" />
-      <h1 className="font-bold pt-6 px-4 text-xl">{name}</h1>
-      <p className="pt-2 px-4">{description}</p>
-      <a className="text-secondary w-64 pt-2 pb-2 text-center place-self-center mt-4 mb-4 border bg-buttonVar1 rounded-xl">
-        START WORKOUT
-      </a>
+      <h1 className="px-4 pt-6 text-xl font-bold">{name}</h1>
+      <p className="px-4 pt-2">{description}</p>
+      <div className="pt-4 pb-4 mx-auto">
+        <Button children="CONTINUE" variant="secondary"></Button>
+      </div>
     </article>
   );
 }
