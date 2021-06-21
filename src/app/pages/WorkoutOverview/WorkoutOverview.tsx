@@ -6,11 +6,7 @@ import 'tailwindcss/tailwind.css';
 function WorkoutOverview(): JSX.Element {
   return (
     <div className="pt-2 m-6">
-      <Header
-        thumbnail="logo.png"
-        name="fitdoc"
-        isProfileButtonVisible={false}
-      />
+      <Header thumbnail="logo.png" isProfileButtonVisible={false} />
 
       <main className="flex flex-col mt-6 place-items-center">
         <WorkoutCardOverview

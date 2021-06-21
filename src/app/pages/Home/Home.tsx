@@ -9,11 +9,7 @@ function Home(): JSX.Element {
   return (
     <div className="m-6">
       <header className="pt-2">
-        <Header
-          thumbnail="logo.png"
-          name="fitdoc"
-          isProfileButtonVisible={true}
-        />
+        <Header thumbnail="logo.png" isProfileButtonVisible={true} />
       </header>
 
       <main className="text-secondary">

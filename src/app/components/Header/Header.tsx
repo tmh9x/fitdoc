@@ -5,14 +5,12 @@ import ProfileButton from '../../components/ProfileButton/ProfileButton';
 
 type HeaderProps = {
   thumbnail: string;
-  name: string;
   isBackButtonVisible?: boolean;
   isProfileButtonVisible?: boolean;
 };
 
 function Header({
   thumbnail,
-  name,
   isBackButtonVisible = true,
   isProfileButtonVisible,
 }: HeaderProps): JSX.Element {
@@ -22,8 +20,8 @@ function Header({
         {isBackButtonVisible && <BackButton thumbnail="back.png" />}
       </div>
       <div className="flex justify-center place-items-center">
-        <img className="w-7 h-7" src={thumbnail} />
-        {name}
+        <img className="pr-1 w-7 h-7" src={thumbnail} />
+        <span>fitdoc</span>
       </div>
       <div className="self-center justify-self-end">
         {isProfileButtonVisible && <ProfileButton thumbnail="profile.png" />}
