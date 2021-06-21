@@ -1,0 +1,5 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+
+### All Exercises
+GET {{baseUrl}}/api/exercises
