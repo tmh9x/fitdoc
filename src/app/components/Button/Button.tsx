@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import 'tailwindcss/tailwind.css';
 
 type ButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
   children?: ReactNode;
   variant: 'primary' | 'secondary';
 };

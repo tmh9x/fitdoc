@@ -27,6 +27,6 @@ function Header({
         {isProfileButtonVisible && <ProfileButton thumbnail="profile.png" />}
       </div>
     </header>
-  );
+};
 }
 export default Header;
