@@ -6,6 +6,4 @@ export default {
   component: Header,
 };
 
-export const Card = (): JSX.Element => (
-  <Header thumbnail="logo.png" name="fitdoc" />
-);
+export const Card = (): JSX.Element => <Header thumbnail="logo.png" />;

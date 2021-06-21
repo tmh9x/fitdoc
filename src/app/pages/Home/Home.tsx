@@ -9,12 +9,12 @@ function Login(): JSX.Element {
   return (
     <div className="m-6">
       <header className="pt-2">
-        <Header thumbnail="logo.png" name="fitdoc" />
+        <Header thumbnail="logo.png" />
       </header>
 
       <main className="text-secondary">
-        <h2 className="mt-6 pb-6">Popular Workouts</h2>
-        <div className="flex flex-row overflow-x-scroll flex-shrink-0 gap-4">
+        <h2 className="pb-6 mt-6">Popular Workouts</h2>
+        <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
             <WorkoutCardLarge thumbnail="pushups.jpeg" name="#" />
           </div>
@@ -26,8 +26,8 @@ function Login(): JSX.Element {
           </div>
         </div>
 
-        <h2 className="mt-6 pb-6">All Workouts</h2>
-        <div className="flex flex-row overflow-x-scroll flex-shrink-0 gap-4">
+        <h2 className="pb-6 mt-6">All Workouts</h2>
+        <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
             <WorkoutCardSmall
               thumbnail="pushups.jpeg"
@@ -64,7 +64,7 @@ function Login(): JSX.Element {
         </div>
 
         <h2 className="pt-6 pb-6">All Exercises</h2>
-        <div className="flex flex-row overflow-x-scroll flex-shrink-0 gap-4">
+        <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
             <ExerciseCard thumbnail="pushups.jpeg" name="#" category="" />
           </div>

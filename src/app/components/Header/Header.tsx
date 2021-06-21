@@ -3,14 +3,13 @@ import 'tailwindcss/tailwind.css';
 
 type HeaderProps = {
   thumbnail: string;
-  name: string;
 };
 
-function Header({ thumbnail, name }: HeaderProps): JSX.Element {
+function Header({ thumbnail }: HeaderProps): JSX.Element {
   return (
-    <div className="text-secondary flex place-content-center text-3xl border-b-2 border-primary pb-2">
-      <img className="w-7 h-7 mt-1 " src={thumbnail} />
-      {name}
+    <div className="flex pb-2 text-3xl border-b-2 text-secondary place-content-center border-primary">
+      <img className="pr-1 mt-1 w-7 h-7" src={thumbnail} />
+      <span>fitdoc</span>
     </div>
   );
 }
