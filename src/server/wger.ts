@@ -20,20 +20,35 @@ async function getWgerCategories(): Promise<WgerCategoriesResult> {
   return result;
 }
 
+async function getWgerMuscles(): Promise<WgerMusclesResult> {
+  const response = await fetch(`${WGER_BASE_URL}/muscle`);
+  const result = await response.json();
+  return result;
+}
+
 export async function getExercises(): Promise<Exercise[]> {
   const wgerExercises = await getWgerExercises();
   const wgerCategories = await getWgerCategories();
+  const wgerMuscles = await getWgerMuscles();
 
-  const exercises = wgerExercises.results.map((wgerExercise) => {
+  const exercises: Exercise[] = wgerExercises.results.map((wgerExercise) => {
     const wgerCategory = wgerCategories.results.find(
       (category) => category.id === wgerExercise.category
     );
+
+    const muscles = wgerExercise.muscles.map((muscle) => {
+      const wgerMuscle = wgerMuscles.results.find(
+        (wgerMuscle) => muscle === wgerMuscle.id
+      );
+      return wgerMuscle ? wgerMuscle.name : 'unknown';
+    });
+
     return {
       id: wgerExercise.id,
       name: wgerExercise.name,
-      muscles: wgerExercise.muscles,
       description: wgerExercise.description,
-      category: wgerCategory?.name || 'unknown',
+      category: wgerCategory ? wgerCategory.name : 'unknown',
+      muscles: muscles,
     };
   });
   return exercises;
@@ -42,23 +57,11 @@ export async function getExercises(): Promise<Exercise[]> {
 type WgerExercisesResult = {
   results: {
     id: number;
-    uuid: string;
     name: string;
-    exercise_base: number;
-    status: number;
     description: string;
     category: number;
-    muscles: [];
-    muscles_secondary: [];
+    muscles: number[];
   }[];
-};
-
-type Exercise = {
-  id: number;
-  name: string;
-  muscles: [];
-  description: string;
-  category: string;
 };
 
 type WgerCategoriesResult = {
@@ -66,4 +69,19 @@ type WgerCategoriesResult = {
     id: number;
     name: string;
   }[];
+};
+
+type WgerMusclesResult = {
+  results: {
+    id: number;
+    name: string;
+  }[];
+};
+
+type Exercise = {
+  id: number;
+  name: string;
+  muscles: string[];
+  description: string;
+  category: string;
 };
