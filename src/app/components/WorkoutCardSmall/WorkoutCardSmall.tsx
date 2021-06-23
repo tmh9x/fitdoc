@@ -1,13 +1,13 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
+import timerIcon from '../../assets/timer.png';
+import levelIcon from '../../assets/level.png';
 
 type WorkoutCardSmallProps = {
   thumbnail: string;
   name: string;
   category: string;
-  iconTimer: string;
   duration: string;
-  iconLevel: string;
   level: string;
 };
 
@@ -15,9 +15,7 @@ function WorkoutCardSmall({
   thumbnail,
   name,
   category,
-  iconTimer,
   duration,
-  iconLevel,
   level,
 }: WorkoutCardSmallProps): JSX.Element {
   return (
@@ -34,9 +32,9 @@ function WorkoutCardSmall({
         {category}
       </div>
       <div className="flex pt-1 pb-1 pl-3 pr-3 font-sans text-xs text-gray-400">
-        <img className="w-4 h-4 mr-1" src={iconTimer} alt="" />
+        <img className="w-4 h-4 mr-1" src={timerIcon} alt="" />
         {duration}
-        <img className="w-3.5 h-3.5 mr-1 ml-5" src={iconLevel} alt="" />
+        <img className="w-3.5 h-3.5 mr-1 ml-5" src={levelIcon} alt="" />
         {level}
       </div>
     </article>
