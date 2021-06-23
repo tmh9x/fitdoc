@@ -11,9 +11,7 @@ export const Card = (): JSX.Element => (
     thumbnail="pushups.jpeg"
     name="Chest Workout"
     category="Muscle"
-    iconTimer="timer.png"
     duration="15 min."
-    iconLevel="level.png"
     level="level"
   />
 );

@@ -33,9 +33,7 @@ function Home(): JSX.Element {
               thumbnail="pushups.jpeg"
               name="#"
               category=""
-              iconTimer=""
               duration=""
-              iconLevel=""
               level=""
             />
           </div>
@@ -44,9 +42,7 @@ function Home(): JSX.Element {
               thumbnail="pushups.jpeg"
               name="#"
               category=""
-              iconTimer=""
               duration=""
-              iconLevel=""
               level=""
             />
           </div>
@@ -55,9 +51,7 @@ function Home(): JSX.Element {
               thumbnail="pushups.jpeg"
               name="#"
               category=""
-              iconTimer=""
               duration=""
-              iconLevel=""
               level=""
             />
           </div>
