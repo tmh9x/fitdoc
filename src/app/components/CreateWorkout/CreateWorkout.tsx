@@ -11,7 +11,7 @@ function CreateWorkout({ name }: CreateWorkoutProps): JSX.Element {
       <div>{name}</div>
       <div className="place-self-end">
         <input className="w-10 mr-4 border rounded" type="number"></input>
-        Button
+        <input className="w-4 h-4" type="checkbox"></input>
       </div>
     </div>
   );
