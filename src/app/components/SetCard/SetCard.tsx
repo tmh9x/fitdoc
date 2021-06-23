@@ -13,9 +13,25 @@ function SetCard({ name, sets }: SetCardProps): JSX.Element {
       key={index}
     >
       <div className="pt-2 pb-2">set {index + 1}</div>
-      <div className="pt-2 pb-2">{set.repetitions}</div>
+      <div className="pt-2 pb-2">
+        <input
+          className="w-8"
+          type="number"
+          maxlength="3"
+          placeholder="reps"
+          {...set.repetitions}
+        />
+      </div>
       <div className="pt-2 pb-2">:</div>
-      <div className="pt-2 pb-2">{set.weight}</div>
+      <div className="pt-2 pb-2">
+        <input
+          className="w-8"
+          type="number"
+          maxlength="500"
+          placeholder="kg"
+          {...set.weight}
+        />
+      </div>
     </div>
   ));
   return (
