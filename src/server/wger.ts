@@ -78,7 +78,7 @@ type WgerMusclesResult = {
   }[];
 };
 
-type Exercise = {
+export type Exercise = {
   id: number;
   name: string;
   muscles: string[];
