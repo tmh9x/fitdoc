@@ -4,12 +4,13 @@ import WorkoutCardLarge from '../../components/WorkoutCardLarge/WorkoutCardLarge
 import WorkoutCardSmall from '../../components/WorkoutCardSmall/WorkoutCardSmall';
 import ExerciseCard from '../../components/ExerciseCard/ExerciseCard';
 import 'tailwindcss/tailwind.css';
+import logo from '../../assets/logo.png';
 
 function Home(): JSX.Element {
   return (
     <div className="m-6">
       <header className="pt-2">
-        <Header thumbnail="logo.png" isProfileButtonVisible={true} />
+        <Header thumbnail={logo} isProfileButtonVisible={true} />
       </header>
 
       <main className="text-secondary">
