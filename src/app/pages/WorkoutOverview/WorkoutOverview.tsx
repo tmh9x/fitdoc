@@ -2,11 +2,12 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import WorkoutCardOverview from '../../components/WorkoutCardOverview/WorkoutCardOverview';
 import 'tailwindcss/tailwind.css';
+import logo from '../../assets/logo.png';
 
 function WorkoutOverview(): JSX.Element {
   return (
     <div className="pt-2 m-6">
-      <Header thumbnail="logo.png" isProfileButtonVisible={false} />
+      <Header thumbnail={logo} isProfileButtonVisible={false} />
 
       <main className="flex flex-col mt-6 place-items-center">
         <WorkoutCardOverview
