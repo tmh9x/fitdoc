@@ -6,4 +6,4 @@ export default {
   component: CreateWorkout,
 };
 
-export const Card = (): JSX.Element => <CreateWorkout name="Push Ups" />;
+export const Default = (): JSX.Element => <CreateWorkout exercises={[]} />;
