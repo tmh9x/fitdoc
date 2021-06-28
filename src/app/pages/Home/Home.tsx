@@ -6,6 +6,7 @@ import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
 import Button from '../../components/Button/Button';
 import pushups from '../../assets/pushups.jpeg';
+import { Link } from 'react-router-dom';
 
 function Home(): JSX.Element {
   return (
@@ -43,7 +44,9 @@ function Home(): JSX.Element {
 
         <h2 className="pt-6 pb-6">Create your personalized Workout!</h2>
         <div className="flex place-content-center">
-          <Button children="CREATE WORKOUT" variant="primary" />
+          <Link to="./Workout">
+            <Button children="CREATE WORKOUT" variant="primary" />
+          </Link>
         </div>
       </main>
     </div>
