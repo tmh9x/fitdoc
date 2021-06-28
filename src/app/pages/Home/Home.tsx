@@ -12,7 +12,11 @@ function Home(): JSX.Element {
   return (
     <div className="m-6">
       <header className="pt-2 bg-primary">
-        <Header thumbnail={logo} isProfileButtonVisible={true} />
+        <Header
+          thumbnail={logo}
+          isProfileButtonVisible={true}
+          isBackButtonVisible={false}
+        />
       </header>
 
       <main className="text-secondary">
