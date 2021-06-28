@@ -7,7 +7,7 @@ type MessageCardProps = {
   message: string;
 };
 
-function MessageCard({ thumbnail, message }: MessageCardProps): JSX.Element {
+const MessageCard = ({ thumbnail, message }: MessageCardProps): JSX.Element => {
   return (
     <div className="p-6 text-center w-80 text-secondary rounded-xl bg-primary">
       <img className="w-40 mx-auto" src={thumbnail} alt="" />
@@ -17,6 +17,6 @@ function MessageCard({ thumbnail, message }: MessageCardProps): JSX.Element {
       </div>
     </div>
   );
-}
+};
 
 export default MessageCard;
