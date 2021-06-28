@@ -48,7 +48,7 @@ function Home(): JSX.Element {
 
         <h2 className="pt-6 pb-6">Create your personalized Workout!</h2>
         <div className="flex place-content-center">
-          <Link to="./Workout">
+          <Link to="./CreateWorkout">
             <Button children="CREATE WORKOUT" variant="primary" />
           </Link>
         </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 import { Exercise } from '../../../server/wger';
 
-type CreateWorkoutProps = {
+type CreateWorkoutCardProps = {
   exercises: Exercise[];
 };
 
-function CreateWorkout({ exercises }: CreateWorkoutProps): JSX.Element {
+function CreateWorkoutCard({ exercises }: CreateWorkoutCardProps): JSX.Element {
   return (
     <div className="py-4 mx-auto rounded-xl bg-secondary w-80">
       <div className="mx-auto mb-4 w-72">
@@ -31,4 +31,4 @@ function CreateWorkout({ exercises }: CreateWorkoutProps): JSX.Element {
     </div>
   );
 }
-export default CreateWorkout;
+export default CreateWorkoutCard;

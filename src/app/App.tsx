@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Workout from './pages/Workout/Workout';
+import CreateWorkout from './pages/CreateWorkout/CreateWorkout';
 import WorkoutOverview from './pages/WorkoutOverview/WorkoutOverview';
 
 function App(): JSX.Element {
@@ -9,8 +9,8 @@ function App(): JSX.Element {
     <Router>
       <Switch>
         <main>
-          <Route path="/Workout">
-            <Workout />
+          <Route path="/CreateWorkout">
+            <CreateWorkout />
           </Route>
           <Route path="/WorkoutOverview">
             <WorkoutOverview />
