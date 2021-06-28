@@ -1,15 +1,16 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import WorkoutCardLarge from '../../components/WorkoutCardLarge/WorkoutCardLarge';
-import WorkoutCardSmall from '../../components/WorkoutCardSmall/WorkoutCardSmall';
 import ExerciseCard from '../../components/ExerciseCard/ExerciseCard';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
+import Button from '../../components/Button/Button';
+import pushups from '../../assets/pushups.jpeg';
 
 function Home(): JSX.Element {
   return (
     <div className="m-6">
-      <header className="pt-2">
+      <header className="pt-2 bg-primary">
         <Header thumbnail={logo} isProfileButtonVisible={true} />
       </header>
 
@@ -17,64 +18,32 @@ function Home(): JSX.Element {
         <h2 className="pb-6 mt-6">Popular Workouts</h2>
         <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
-            <WorkoutCardLarge thumbnail="pushups.jpeg" name="#" />
+            <WorkoutCardLarge thumbnail={pushups} name="#" />
           </div>
           <div>
-            <WorkoutCardLarge thumbnail="pushups.jpeg" name="#" />
+            <WorkoutCardLarge thumbnail={pushups} name="#" />
           </div>
           <div>
-            <WorkoutCardLarge thumbnail="pushups.jpeg" name="#" />
-          </div>
-        </div>
-
-        <h2 className="pb-6 mt-6">All Workouts</h2>
-        <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
-          <div>
-            <WorkoutCardSmall
-              thumbnail="pushups.jpeg"
-              name="#"
-              category=""
-              iconTimer=""
-              duration=""
-              iconLevel=""
-              level=""
-            />
-          </div>
-          <div className="">
-            <WorkoutCardSmall
-              thumbnail="pushups.jpeg"
-              name="#"
-              category=""
-              iconTimer=""
-              duration=""
-              iconLevel=""
-              level=""
-            />
-          </div>
-          <div className="">
-            <WorkoutCardSmall
-              thumbnail="pushups.jpeg"
-              name="#"
-              category=""
-              iconTimer=""
-              duration=""
-              iconLevel=""
-              level=""
-            />
+            <WorkoutCardLarge thumbnail={pushups} name="#" />
           </div>
         </div>
 
         <h2 className="pt-6 pb-6">All Exercises</h2>
         <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
-            <ExerciseCard thumbnail="pushups.jpeg" name="#" category="" />
+            <ExerciseCard thumbnail={pushups} name="#" category="" />
           </div>
           <div>
-            <ExerciseCard thumbnail="pushups.jpeg" name="#" category="" />
+            <ExerciseCard thumbnail={pushups} name="#" category="" />
           </div>
           <div>
-            <ExerciseCard thumbnail="pushups.jpeg" name="#" category="" />
+            <ExerciseCard thumbnail={pushups} name="#" category="" />
           </div>
+        </div>
+
+        <h2 className="pt-6 pb-6">Create your personalized Workout!</h2>
+        <div className="flex place-content-center">
+          <Button children="CREATE WORKOUT" variant="primary" />
         </div>
       </main>
     </div>
