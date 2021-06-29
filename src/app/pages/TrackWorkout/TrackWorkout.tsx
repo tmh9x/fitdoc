@@ -4,6 +4,7 @@ import SetCard from '../../components/SetCard/SetCard';
 import Button from '../../components/Button/Button';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function WorkoutOverview(): JSX.Element {
   return (
@@ -12,7 +13,9 @@ function WorkoutOverview(): JSX.Element {
 
       <main className="flex flex-col mt-6 place-items-center">
         <SetCard name="" sets={[]} />
-        <Button children="SAVE WORKOUT" variant="primary" />
+        <Link to="./">
+          <Button children="SAVE WORKOUT" variant="primary" />
+        </Link>
       </main>
     </div>
   );
