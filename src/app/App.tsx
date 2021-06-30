@@ -4,20 +4,24 @@ import Home from './pages/Home/Home';
 import CreateWorkout from './pages/CreateWorkout/CreateWorkout';
 import WorkoutOverview from './pages/WorkoutOverview/WorkoutOverview';
 import TrackWorkout from './pages/TrackWorkout/TrackWorkout';
+import Profile from './pages/Profile/Profile';
 
 function App(): JSX.Element {
   return (
     <Router>
       <Switch>
         <main>
-          <Route path="/CreateWorkout">
+          <Route path="/create">
             <CreateWorkout />
           </Route>
-          <Route path="/WorkoutOverview">
+          <Route path="/overview">
             <WorkoutOverview />
           </Route>
-          <Route path="/TrackWorkout">
+          <Route path="/track">
             <TrackWorkout />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
           <Route exact path="/">
             <Home />
