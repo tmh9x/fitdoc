@@ -7,6 +7,9 @@ module.exports = {
         primary: '#24272f;',
         secondary: '#fff',
       },
+      gridTemplateRows: {
+        exerciseCard: '55% 30% 15%',
+      },
       backgroundColor: {
         primary: '#24272f;',
         secondary: '#fff',

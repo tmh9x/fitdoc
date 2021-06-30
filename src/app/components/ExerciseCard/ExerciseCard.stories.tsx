@@ -7,5 +7,5 @@ export default {
 };
 
 export const Card = (): JSX.Element => (
-  <ExerciseCard thumbnail="pushups.jpeg" name="Push Ups" category="muscle" />
+  <ExerciseCard thumbnail="pushups.jpeg" exercises={[]} />
 );

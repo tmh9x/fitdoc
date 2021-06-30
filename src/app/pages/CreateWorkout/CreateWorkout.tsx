@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button';
 import useFetch from '../../hooks/useFetch';
 import { Exercise } from '../../../server/wger';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function CreateWorkout(): JSX.Element {
   const exercises = useFetch<Exercise[]>('/api/exercises');
@@ -21,7 +22,9 @@ function CreateWorkout(): JSX.Element {
         <CreateWorkoutCard exercises={exercises} />
       </div>
       <div className="flex mt-4 place-content-center">
-        <Button children="SAVE" variant="primary" />
+        <Link to="./TrackWorkout">
+          <Button children="SAVE" variant="primary" />
+        </Link>
       </div>
     </div>
   );

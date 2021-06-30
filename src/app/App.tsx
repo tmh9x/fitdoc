@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import CreateWorkout from './pages/CreateWorkout/CreateWorkout';
 import WorkoutOverview from './pages/WorkoutOverview/WorkoutOverview';
+import TrackWorkout from './pages/TrackWorkout/TrackWorkout';
 
 function App(): JSX.Element {
   return (
@@ -14,6 +15,9 @@ function App(): JSX.Element {
           </Route>
           <Route path="/WorkoutOverview">
             <WorkoutOverview />
+          </Route>
+          <Route path="/TrackWorkout">
+            <TrackWorkout />
           </Route>
           <Route exact path="/">
             <Home />

@@ -15,7 +15,7 @@ const variants = {
 function Button({ onClick, children, variant }: ButtonProps): JSX.Element {
   return (
     <button
-      className={`w-64 h-10 rounded-xl text-secondary ${variants[variant]}`}
+      className={`w-64 h-10 rounded-xl mt-6 text-secondary ${variants[variant]}`}
       onClick={onClick}
     >
       {children}
