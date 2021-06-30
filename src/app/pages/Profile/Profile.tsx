@@ -8,7 +8,7 @@ import Button from '../../components/Button/Button';
 function Profile(): JSX.Element {
   return (
     <div className="pt-2 m-6">
-      <Header thumbnail={logo} isProfileButtonVisible={false} />
+      <Header thumbnail={logo} isProfileLinkVisible={false} />
 
       <main className="flex flex-col mt-6 place-items-center">
         <ProfileForm />
