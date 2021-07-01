@@ -17,7 +17,7 @@ function App(): JSX.Element {
           <Route path="/overview">
             <WorkoutOverview />
           </Route>
-          <Route path="/track">
+          <Route path="/track/:name">
             <TrackWorkout />
           </Route>
           <Route path="/profile">

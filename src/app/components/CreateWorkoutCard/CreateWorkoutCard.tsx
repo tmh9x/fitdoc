@@ -1,32 +1,43 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 import { Exercise } from '../../../server/wger';
+import WorkoutExercise from './WorkoutExercise';
 
 type CreateWorkoutCardProps = {
   exercises: Exercise[];
+  name: string;
+  handleNameChange: (name: string) => void;
+  onWorkoutExerciseChange: (
+    name: string,
+    sets: number,
+    active: boolean
+  ) => void;
 };
 
-function CreateWorkoutCard({ exercises }: CreateWorkoutCardProps): JSX.Element {
+function CreateWorkoutCard({
+  exercises,
+  onWorkoutExerciseChange,
+  name,
+  handleNameChange,
+}: CreateWorkoutCardProps): JSX.Element {
   return (
     <div className="py-4 mx-auto rounded-xl bg-secondary w-80">
       <div className="mx-auto mb-4 w-72">
         <input
           type="text"
+          value={name}
+          onChange={(event) => handleNameChange(event.target.value)}
           placeholder="Workoutname"
           className="h-10 p-4 border w-72 rounded-xl"
-        ></input>
+        />
       </div>
       {exercises &&
         exercises.map((exercise) => (
-          <div className="grid grid-cols-3 p-2 mx-auto mb-2 border last:mb-0 rounded-xl bg-secondary w-72">
-            <div className="col-start-1 col-end-3 pl-2 text-xs">
-              {exercise.name}
-            </div>
-            <div className="col-start-3 place-self-end">
-              <input className="w-10 mr-4 border rounded" type="number"></input>
-              <input className="w-4 h-4" type="checkbox"></input>
-            </div>
-          </div>
+          <WorkoutExercise
+            key={exercise.id}
+            name={exercise.name}
+            onChange={onWorkoutExerciseChange}
+          />
         ))}
     </div>
   );
