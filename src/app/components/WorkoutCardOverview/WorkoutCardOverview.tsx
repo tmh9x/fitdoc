@@ -19,7 +19,7 @@ function WorkoutCardOverview({
       <h1 className="px-4 pt-6 text-xl font-bold">{name}</h1>
       <p className="px-4 pt-2">{description}</p>
       <div className="pt-4 pb-4 mx-auto">
-        <Button children="CONTINUE" variant="secondary"></Button>
+        <Button variant="secondary">continue</Button>
       </div>
     </article>
   );

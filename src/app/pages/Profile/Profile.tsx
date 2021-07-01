@@ -1,23 +1,21 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import WorkoutCardOverview from '../../components/WorkoutCardOverview/WorkoutCardOverview';
+import ProfileForm from '../../components/ProfileForm/ProfileForm';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
+import Button from '../../components/Button/Button';
 
-function WorkoutOverview(): JSX.Element {
+function Profile(): JSX.Element {
   return (
     <div className="pt-2 m-6">
       <Header thumbnail={logo} isProfileLinkVisible={false} />
 
       <main className="flex flex-col mt-6 place-items-center">
-        <WorkoutCardOverview
-          thumbnail="pushups.jpeg"
-          name="Push Ups"
-          description=""
-        />
+        <ProfileForm />
+        <Button variant="primary">save</Button>
       </main>
     </div>
   );
 }
 
-export default WorkoutOverview;
+export default Profile;

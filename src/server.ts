@@ -16,10 +16,10 @@ app.use(express.static('dist/app'));
 
 app.use('/api', router);
 
-app.listen(PORT, () => {
-  console.log(`Server listening at http://localhost:${PORT}`);
-});
-
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'app/index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening at http://localhost:${PORT}`);
 });

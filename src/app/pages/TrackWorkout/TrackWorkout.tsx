@@ -4,18 +4,19 @@ import SetCard from '../../components/SetCard/SetCard';
 import Button from '../../components/Button/Button';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function WorkoutOverview(): JSX.Element {
+  const history = useHistory();
   return (
     <div className="pt-2 m-6">
-      <Header thumbnail={logo} isProfileButtonVisible={false} />
+      <Header thumbnail={logo} isProfileLinkVisible={false} />
 
       <main className="flex flex-col mt-6 place-items-center">
         <SetCard name="" sets={[]} />
-        <Link to="./">
-          <Button children="SAVE WORKOUT" variant="primary" />
-        </Link>
+        <Button onClick={() => history.push('/')} variant="primary">
+          save workout
+        </Button>
       </main>
     </div>
   );

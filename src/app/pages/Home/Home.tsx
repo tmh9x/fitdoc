@@ -6,12 +6,13 @@ import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
 import Button from '../../components/Button/Button';
 import pushups from '../../assets/pushups.jpeg';
-import { Link } from 'react-router-dom';
 import { Exercise } from '../../../server/wger';
 import useFetch from '../../hooks/useFetch';
+import { useHistory } from 'react-router-dom';
 
 function Home(): JSX.Element {
   const exercises = useFetch<Exercise[]>('/api/exercises');
+  const history = useHistory();
 
   if (!exercises) {
     return <div>Not found!</div>;
@@ -21,7 +22,7 @@ function Home(): JSX.Element {
       <header className="pt-2 bg-primary">
         <Header
           thumbnail={logo}
-          isProfileButtonVisible={true}
+          isProfileLinkVisible={true}
           isBackButtonVisible={false}
         />
       </header>
@@ -47,9 +48,9 @@ function Home(): JSX.Element {
 
         <h2 className="pt-6">Create your personalized Workout!</h2>
         <div className="flex place-content-center">
-          <Link to="./CreateWorkout">
-            <Button children="CREATE WORKOUT" variant="primary" />
-          </Link>
+          <Button onClick={() => history.push('/create')} variant="primary">
+            create workout
+          </Button>
         </div>
       </main>
     </div>
