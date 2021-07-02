@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
 import { useHistory, useParams } from 'react-router-dom';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { Workout } from '../../../types';
 
 function WorkoutOverview(): JSX.Element {

@@ -6,4 +6,11 @@ export default {
   component: CreateWorkoutCard,
 };
 
-export const Default = (): JSX.Element => <CreateWorkoutCard exercises={[]} />;
+export const Default = (): JSX.Element => (
+  <CreateWorkoutCard
+    exercises={[]}
+    onWorkoutExerciseChange={console.log}
+    name=""
+    handleNameChange={console.log}
+  />
+);

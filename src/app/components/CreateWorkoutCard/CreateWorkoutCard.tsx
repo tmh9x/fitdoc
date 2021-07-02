@@ -1,7 +1,7 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 import { Exercise } from '../../../server/wger';
-import WorkoutExercise from './WorkoutExercise';
+import WorkoutExercise from '../WorkoutExercise/WorkoutExercise';
 
 type CreateWorkoutCardProps = {
   exercises: Exercise[];

@@ -8,7 +8,7 @@ import Button from '../../components/Button/Button';
 import CreateWorkoutCard from '../../components/CreateWorkoutCard/CreateWorkoutCard';
 import Header from '../../components/Header/Header';
 import useFetch from '../../hooks/useFetch';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 function CreateWorkout(): JSX.Element {
   const exercises = useFetch<Exercise[]>('/api/exercises');
