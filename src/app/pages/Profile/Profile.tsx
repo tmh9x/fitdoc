@@ -7,11 +7,13 @@ import Button from '../../components/Button/Button';
 
 function Profile(): JSX.Element {
   return (
-    <div className="pt-2 m-6">
+    <div className="m-6">
       <Header thumbnail={logo} isProfileLinkVisible={false} />
 
-      <main className="flex flex-col mt-6 place-items-center">
-        <ProfileForm />
+      <main className="flex flex-col pt-6 place-items-center">
+        <div className="pb-4">
+          <ProfileForm />
+        </div>
         <Button variant="primary">save</Button>
       </main>
     </div>

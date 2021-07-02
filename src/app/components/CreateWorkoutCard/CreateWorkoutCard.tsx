@@ -22,7 +22,7 @@ function CreateWorkoutCard({
 }: CreateWorkoutCardProps): JSX.Element {
   return (
     <div className="py-4 mx-auto rounded-xl bg-secondary w-80">
-      <div className="mx-auto mb-4 w-72">
+      <div className="pb-4 mx-auto w-72">
         <input
           type="text"
           value={name}

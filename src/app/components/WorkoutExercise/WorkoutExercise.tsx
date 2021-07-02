@@ -17,7 +17,7 @@ export default function WorkoutExercise({
   }, [sets, active]);
 
   return (
-    <div className="grid grid-cols-3 p-2 mx-auto mb-2 border last:mb-0 rounded-xl bg-secondary w-72">
+    <div className="grid grid-cols-3 p-1 mx-auto mb-2 border rounded-xl last:mb-0 bg-secondary w-72">
       <div className="col-start-1 col-end-3 pl-2 text-xs">{name}</div>
       <div className="col-start-3 place-self-end">
         <input

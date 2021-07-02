@@ -8,14 +8,14 @@ import Button from '../../components/Button/Button';
 import pushups from '../../assets/pushups.jpeg';
 import { Exercise } from '../../../server/wger';
 import useFetch from '../../hooks/useFetch';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Home(): JSX.Element {
   const exercises = useFetch<Exercise[]>('/api/exercises');
   const history = useHistory();
 
   if (!exercises) {
-    return <div>Not found!</div>;
+    return <div className="text-secondary">Not found!</div>;
   }
   return (
     <div className="m-6 text-secondary">
@@ -28,11 +28,11 @@ function Home(): JSX.Element {
       </header>
 
       <main>
-        <h2 className="pb-6 mt-6">Popular Workouts</h2>
+        <h2 className="pt-6 pb-4">Popular Workouts</h2>
         <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
-          <div>
+          <Link to="/overview">
             <WorkoutCard thumbnail={pushups} name="Push-Day" />
-          </div>
+          </Link>
           <div>
             <WorkoutCard thumbnail={pushups} name="#" />
           </div>
@@ -40,13 +40,11 @@ function Home(): JSX.Element {
             <WorkoutCard thumbnail={pushups} name="#" />
           </div>
         </div>
-
-        <h2 className="pt-6 pb-6">All Exercises</h2>
-        <div className="flex flex-row gap-4 overflow-x-scroll">
+        <h2 className="pt-6 pb-4">All Exercises</h2>
+        <Link to="/overview" className="flex flex-row gap-4 overflow-x-scroll">
           <ExerciseCard thumbnail={pushups} exercises={exercises} />
-        </div>
-
-        <h2 className="pt-6">Create your personalized Workout!</h2>
+        </Link>
+        <h2 className="pt-6 pb-4">Create your personalized Workout!</h2>
         <div className="flex place-content-center">
           <Button onClick={() => history.push('/create')} variant="primary">
             create workout
