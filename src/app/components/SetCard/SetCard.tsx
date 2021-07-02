@@ -7,21 +7,21 @@ type SetCardProps = {
 };
 
 function SetCard({ name, sets }: SetCardProps): JSX.Element {
-  const setList = sets.map((set, index) => (
+  const setList = sets.map((_set, index) => (
     <div
       className="grid grid-cols-4 text-center border-b border-dashed last:border-none"
       key={index}
     >
-      <div className="pt-2 pb-2">set {index + 1}</div>
-      <div className="pt-2 pb-2">{set.repetitions}</div>
-      <div className="pt-2 pb-2">:</div>
-      <div className="pt-2 pb-2">{set.weight}</div>
+      <div className="py-2">set {index + 1}</div>
+      <input type="number" className="py-2 text-right"></input>
+      <div className="py-2">:</div>
+      <input type="number" className="py-2"></input>
     </div>
   ));
   return (
-    <div className="pt-2 mt-6 w-80 rounded-xl bg-secondary">
-      <h2 className="pl-4 font-bold">{name}</h2>
-      <div>{setList}</div>
+    <div className="p-2 mb-4 last:mb-0 w-80 rounded-xl bg-secondary">
+      <h2 className="pt-2 pl-4 font-bold">{name}</h2>
+      {setList}
     </div>
   );
 }

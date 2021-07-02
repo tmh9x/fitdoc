@@ -54,24 +54,23 @@ function CreateWorkout(): JSX.Element {
   }
 
   if (!exercises) {
-    return <div>Not found!</div>;
+    return <div className="text-secondary">Not found!</div>;
   }
 
   return (
-    <div className="pt-2 m-6">
+    <div className="m-6">
       <Header thumbnail={logo} />
-      <form onSubmit={handleSubmit}>
-        <div className="mt-6">
-          <CreateWorkoutCard
-            exercises={exercises}
-            name={name}
-            handleNameChange={setName}
-            onWorkoutExerciseChange={updateWorkoutExercise}
-          />
-        </div>
-        <div className="flex place-content-center">
-          <Button variant="primary">save</Button>
-        </div>
+      <form
+        onSubmit={handleSubmit}
+        className="grid gap-6 pt-6 place-items-center"
+      >
+        <CreateWorkoutCard
+          exercises={exercises}
+          name={name}
+          handleNameChange={setName}
+          onWorkoutExerciseChange={updateWorkoutExercise}
+        />
+        <Button variant="primary">save</Button>
       </form>
     </div>
   );

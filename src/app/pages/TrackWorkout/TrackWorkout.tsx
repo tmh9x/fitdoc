@@ -4,35 +4,49 @@ import SetCard from '../../components/SetCard/SetCard';
 import Button from '../../components/Button/Button';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { Workout } from '../../../types';
+import MessageCard from '../../components/MessageCard/MessageCard';
+import checked from '../../assets/checked.png';
 
 function WorkoutOverview(): JSX.Element {
   const { name } = useParams<{ name: string }>();
   const [workouts] = useLocalStorage<Workout[]>('workouts', []);
   const [workout, setWorkout] = useState<Workout | null | undefined>(null);
-  const history = useHistory();
+  const [showMessageCard, setShowMessageCard] = useState<boolean>(false);
 
   useEffect(() => {
     setWorkout(workouts.find((workout) => workout.name === name));
   }, []);
 
   if (!workout) {
-    return <p>Workout not found</p>;
+    return <p className="text-secondary">Workout not found</p>;
   }
 
   return (
-    <div className="pt-2 m-6">
+    <div className="m-6">
       <Header thumbnail={logo} isProfileLinkVisible={false} />
 
-      <main className="flex flex-col mt-6 place-items-center">
-        <div className="font-bold text-secondary">{workout.name}</div>
-        {workout.exercises.map((exercise) => (
-          <SetCard name={exercise.name} sets={exercise.sets} />
-        ))}
-        <Button onClick={() => history.push('/')} variant="primary">
-          save workout
+      <main className="flex flex-col place-items-center">
+        <div className="pt-4 pb-2 font-bold text-secondary">{workout.name}</div>
+
+        <div className="pb-6">
+          {workout.exercises.map((exercise) => (
+            <SetCard name={exercise.name} sets={exercise.sets} />
+          ))}
+        </div>
+
+        <span className="absolute top-40 ">
+          {showMessageCard && (
+            <MessageCard
+              thumbnail={checked}
+              setShowMessageCard={setShowMessageCard}
+            />
+          )}
+        </span>
+        <Button onClick={() => setShowMessageCard(true)} variant="primary">
+          finish
         </Button>
       </main>
     </div>
