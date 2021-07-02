@@ -1,26 +1,27 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
-import Button from '../Button/Button';
+import { Exercise } from '../../../server/wger';
+import pushups from '../../assets/pushups.jpeg';
+import useFetch from '../../hooks/useFetch';
 
 type WorkoutCardOverviewProps = {
-  thumbnail: string;
   name: string;
-  description: string;
 };
 
-function WorkoutCardOverview({
-  thumbnail,
-  name,
-  description,
-}: WorkoutCardOverviewProps): JSX.Element {
+function WorkoutCardOverview({ name }: WorkoutCardOverviewProps): JSX.Element {
+  const exercises = useFetch<Exercise[]>('/api/exercises');
+
+  if (!exercises) {
+    return <p className="text-secondary">Workout or Exercise not found!</p>;
+  }
+
   return (
     <article className="grid bg-secondary w-80 rounded-xl auto-rows-min">
-      <img className="rounded-t-xl" src={thumbnail} alt="" />
+      <img className="rounded-t-xl" src={pushups} alt="" />
       <h1 className="px-4 pt-6 text-xl font-bold">{name}</h1>
-      <p className="px-4 pt-2">{description}</p>
-      <div className="pt-4 pb-4 mx-auto">
-        <Button variant="secondary">continue</Button>
-      </div>
+      {exercises.map((exercise) => (
+        <div className="px-4 pt-2">{exercise.description}</div>
+      ))}
     </article>
   );
 }
