@@ -1,15 +1,12 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 
-type WorkoutCardLargeProps = {
+type WorkoutCardProps = {
   thumbnail: string;
   name: string;
 };
 
-function WorkoutCardLarge({
-  thumbnail,
-  name,
-}: WorkoutCardLargeProps): JSX.Element {
+function WorkoutCard({ thumbnail, name }: WorkoutCardProps): JSX.Element {
   return (
     <article className="grid grid-cols-2 grid-rows-2 text-primary w-80 rounded-xl">
       <div className="col-start-1 col-end-3 row-start-1 row-end-3">
@@ -23,4 +20,4 @@ function WorkoutCardLarge({
     </article>
   );
 }
-export default WorkoutCardLarge;
+export default WorkoutCard;

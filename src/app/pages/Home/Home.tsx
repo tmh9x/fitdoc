@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import WorkoutCardLarge from '../../components/WorkoutCardLarge/WorkoutCardLarge';
+import WorkoutCard from '../../components/WorkoutCard/WorkoutCard';
 import ExerciseCard from '../../components/ExerciseCard/ExerciseCard';
 import 'tailwindcss/tailwind.css';
 import logo from '../../assets/logo.png';
@@ -31,13 +31,13 @@ function Home(): JSX.Element {
         <h2 className="pb-6 mt-6">Popular Workouts</h2>
         <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <div>
-            <WorkoutCardLarge thumbnail={pushups} name="Push-Day" />
+            <WorkoutCard thumbnail={pushups} name="Push-Day" />
           </div>
           <div>
-            <WorkoutCardLarge thumbnail={pushups} name="#" />
+            <WorkoutCard thumbnail={pushups} name="#" />
           </div>
           <div>
-            <WorkoutCardLarge thumbnail={pushups} name="#" />
+            <WorkoutCard thumbnail={pushups} name="#" />
           </div>
         </div>
 
