@@ -25,19 +25,19 @@ function WorkoutOverview(): JSX.Element {
   }
 
   return (
-    <div className="m-6">
+    <div className="pt-2 pb-4 mx-2">
       <Header thumbnail={logo} isProfileLinkVisible={false} />
 
       <main className="flex flex-col place-items-center">
         <div className="pt-4 pb-2 font-bold text-secondary">{workout.name}</div>
 
-        <div className="pb-6">
+        <div className="pb-4">
           {workout.exercises.map((exercise) => (
             <SetCard name={exercise.name} sets={exercise.sets} />
           ))}
         </div>
 
-        <span className="absolute top-40 ">
+        <span className="fixed top-40 ">
           {showMessageCard && (
             <MessageCard
               thumbnail={checked}

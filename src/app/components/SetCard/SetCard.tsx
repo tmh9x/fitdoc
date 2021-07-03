@@ -13,9 +13,13 @@ function SetCard({ name, sets }: SetCardProps): JSX.Element {
       key={index}
     >
       <div className="py-2">set {index + 1}</div>
-      <input type="number" className="py-2 text-right"></input>
+      <input
+        type="number"
+        placeholder="reps"
+        className="py-2 text-right"
+      ></input>
       <div className="py-2">:</div>
-      <input type="number" className="py-2"></input>
+      <input type="number" placeholder="weight" className="py-2"></input>
     </div>
   ));
   return (

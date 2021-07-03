@@ -58,11 +58,11 @@ function CreateWorkout(): JSX.Element {
   }
 
   return (
-    <div className="m-6">
+    <div className="pt-2 pb-4 mx-2">
       <Header thumbnail={logo} />
       <form
         onSubmit={handleSubmit}
-        className="grid gap-6 pt-6 place-items-center"
+        className="grid gap-4 pt-6 place-items-center"
       >
         <CreateWorkoutCard
           exercises={exercises}

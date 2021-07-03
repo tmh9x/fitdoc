@@ -11,7 +11,7 @@ type MessageCardProps = {
 function MessageCard({ thumbnail }: MessageCardProps): JSX.Element {
   const history = useHistory();
   return (
-    <div className="grid pt-6 pb-6 place-items-center w-72 text-secondary rounded-xl bg-primary">
+    <div className="grid pt-6 pb-6 bg-gradient-to-r from-gray-700 via-gray-900 to-black place-items-center w-72 text-secondary rounded-xl bg-primary">
       <img className="w-40" src={thumbnail} alt="" />
       <p className="p-6 text-3xl">Congratulations!</p>
       <p className="mb-4">Yor're done for today.</p>

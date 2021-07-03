@@ -6,15 +6,11 @@ import logo from '../../assets/logo.png';
 
 function WorkoutOverview(): JSX.Element {
   return (
-    <div className="pt-2 m-6">
+    <div className="pt-2 pb-4 mx-2">
       <Header thumbnail={logo} isProfileLinkVisible={false} />
 
-      <main className="flex flex-col mt-6 place-items-center">
-        <WorkoutCardOverview
-          thumbnail="pushups.jpeg"
-          name="Push Ups"
-          description=""
-        />
+      <main className="flex flex-col pt-6 place-items-center">
+        <WorkoutCardOverview name="2 Handed Kettlebell Swing" />
       </main>
     </div>
   );
