@@ -1,99 +1,61 @@
-# Name of the Project
+# fitdoc
 
-> Additional information or tag line
+fitdoc uses the wger REST API. It's a mobile web app that allows you to track and save your workout progress. You can choose between ready-made workouts or create a personalized workout from the individual exercises. On the overview page you can also find useful information about the corresponding workouts and exercises.
 
-A brief description of your project, what it is used for.
+## Demo
 
-## Installing / Getting started
+[Heroku](https://fitdoc-app.herokuapp.com/)
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+This app was programmed for mobile view. For a better view in your browser, open the development tolls and switch there to the mobile view. Preferably in the format of an iPhone 6/7/8.
+
+## Getting started
+
+After cloning/ forking the project and opening in an editor you can run:
 
 ```shell
-commands here
+npm start
+npm install
 ```
+Runs the server in the production mode and serve production bundle from npm run build.
 
-Here you should say what actually happens when you execute the code above.
+```shell
+npm run client:dev
+```
+Runs the app in development mode. Open http://localhost:3000 (default PORT) to view it in the browser. The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
+
+```shell
+npm run server:dev
+```
+Runs the server in the development mode.
+
+```shell
+npm run build
+```
+Build a production bundle.
+
+```shell
+npm run storybook
+```
+Run storybook.
 
 ## Developing
 
 ### Built With
 
-List main libraries, frameworks used including versions (React, Angular etc...)
+[React](https://reactjs.org/)
 
-### Prerequisites
+### Tech Stack
 
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
-
-### Setting up Dev
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
-```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
-## Versioning
-
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when using the project.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-Explain what these tests test and why.
-
-```shell
-Give an example
-```
-
-## Style guide
-
-Explain your code style and show how to check it.
-
-## Api Reference
-
-If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
-
-## Database
-
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc...
-
-## Licensing
-
-State what the license is and how to find the text version of the license.
+[Tailwind CSS](https://tailwindcss.com/)
+[React Hooks](https://reactjs.org/docs/hooks-intro.html)
+[React Router](https://reactjs.org/)
+[TypeScript](https://www.typescriptlang.org/)
+[node.js](https://nodejs.org/en/)
+[node-fetch](https://github.com/node-fetch/node-fetch)
+[Storybook](https://storybook.js.org/)
+[Heroku](https://dashboard.heroku.com/apps)
+[dotenv](https://github.com/motdotla/dotenv)
+[Prettier](https://prettier.io/)
+[ESLint](https://eslint.org/)
+[Husky](https://github.com/typicode/husky)
+[Lint-Staged](https://github.com/okonet/lint-staged)
