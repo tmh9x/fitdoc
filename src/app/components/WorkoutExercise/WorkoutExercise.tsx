@@ -21,7 +21,7 @@ export default function WorkoutExercise({
       <div className="col-start-1 col-end-3 pl-2 text-xs">{name}</div>
       <div className="col-start-3 place-self-end">
         <input
-          className="w-10 mr-4 border rounded"
+          className="w-8 mr-4 border rounded"
           type="number"
           value={sets}
           onChange={(event) => {
@@ -29,7 +29,7 @@ export default function WorkoutExercise({
           }}
         />
         <input
-          className="w-4 h-4"
+          className="w-4 h-4 my-2 mr-2"
           type="checkbox"
           checked={active}
           onChange={(event) => setActive(event.target.checked)}
