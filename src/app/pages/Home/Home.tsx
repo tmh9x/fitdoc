@@ -31,7 +31,7 @@ function Home(): JSX.Element {
       </header>
 
       <main>
-        <h2 className="pt-6 pb-4">Popular Workouts</h2>
+        <h2 className="pt-6 pb-2">Popular Workouts</h2>
         <div className="flex flex-row flex-shrink-0 gap-4 overflow-x-scroll">
           <Link to="/overview">
             <WorkoutCard thumbnail={fullbody} name="Full-Body-Workout" />
@@ -43,11 +43,13 @@ function Home(): JSX.Element {
             <WorkoutCard thumbnail={cardio} name="Cardio-Workout" />
           </div>
         </div>
-        <h2 className="pt-6 pb-4">All Exercises</h2>
+        <h2 className="pt-6 pb-2">All Exercises</h2>
         <Link to="/overview" className="flex flex-row gap-4 overflow-x-scroll">
           <ExerciseCard thumbnail={kettlebell} exercises={exercises} />
         </Link>
-        <h2 className="pt-6 pb-4">Create your personalized Workout!</h2>
+        <h2 className="pt-6 pb-2 text-center">
+          Create your personalized Workout!
+        </h2>
         <div className="flex place-content-center">
           <Button onClick={() => history.push('/create')} variant="primary">
             create workout
