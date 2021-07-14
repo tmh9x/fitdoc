@@ -5,7 +5,7 @@ import therock from '../../assets/therock.png';
 function ProfileForm(): JSX.Element {
   return (
     <>
-      <form className="grid gap-4 p-4 rounded-xl w-80 bg-secondary">
+      <form className="grid gap-2 p-4 rounded-xl w-80 bg-secondary">
         <div className="w-40 h-40 border rounded-full place-self-center">
           <img className="object-cover rounded-full" src={therock} />
         </div>
